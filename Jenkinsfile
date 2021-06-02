@@ -1,8 +1,13 @@
-node("BuildServer"){
-
+pipeline {
+    agent any
     checkout scm
-   
-    stage("Provision Load and Run"){   
-            sh "./exec-jmeter.sh 3"
-        }        
+    stages {
+        stage ("test") {
+                       sh "./exec-jmeter.sh 3"
+             
+
+        }
+    
+    }
+
 }
