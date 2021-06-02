@@ -1,9 +1,17 @@
 pipeline {
     agent any
-    checkout scm
+    
     stages {
+        stage (checkout scm){
+            steps {
+            checkout scm
+            }
+        }
         stage ("test") {
-                       sh "./exec-jmeter.sh 3"
+            steps {
+             sh "./exec-jmeter.sh 3"
+
+            }
              
 
         }
