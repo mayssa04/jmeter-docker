@@ -16,4 +16,4 @@ for filename in scripts/*.jmx; do
     eval "docker cp master:$WDIR/$NAME results/"
 done
 
-docker-compose stop && docker-compose rm -f
+#docker-compose stop && docker-compose rm -f
